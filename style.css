@@ -5,29 +5,47 @@
     font-family: Arial, Helvetica, sans-serif; /*Se define el font family para todos los elementos como Arial (Puede ser otro diferente) */
     scroll-behavior: smooth;
     border: 0;
-}
-:root {
-    --background-principal: black; /*Variable que puede ser usada en cualquier parte del archivo con la función var() */
-    --color-letra: white; /*Variable que puede ser usada en cualquier parte del archivo con la función var() */
+    box-sizing: border-box;
 }
 .header {
-    position: fixed; /*El elemento es fijado al viewport, es decir que si se hace scroll, el elmento seguirá en la posición fijada*/
+    --background-principal: black;
+    --background-secundaria: red;
+    --color-letra: white;
     top: 0;
     display: flex;
     width: 100vw;
     justify-content: space-between; /* Los elementos del contenedor se envian hacia los lados */
     align-items: center;
     background-color: var(--background-principal);
+    
     padding: 0 0.5rem 0 2rem; /*TOP: 0px RIGHT: 8px BOTTOM: 0px LEFT: 32px*/
 }
+.boton-whatsapp img{
+    width: 100%;
+    height: 100%;
+
+}
+.boton-whatsapp{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
 .logo-cocacola{
-    width: 80%;
-    height: 60%;
+    width: 40%;
+    height: 40%;
 }
 .header h1 {
     color: var(--color-letra)
 }
 section{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
     width: 100vw;
     height: 100vw;
     border: 2px solid red;
@@ -45,7 +63,6 @@ section{
 }
 .botonessection a {
     color: white;
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 20%;
@@ -57,8 +74,129 @@ section{
     padding: 1rem;
 }
 
+.seccion1{
+    border: solid 2px black;
+    width: 35%;
+    color: var(--color-letra);
+}
+/* configuracion del titulo de div1-secion1 */
+.seccion1 h2 {
+    margin:10%;
+    border: solid 2px black;
+    font-size: 4rem;
+    font-weight: 600; /*Que tanta negrilla se quiere*/
+}
+/* parrafo */
+.seccion1 p{
+    margin: 5%;
+    
+}
+.contenedorima img{
+    border-radius: 60vw;
+    width: 30vw;
+    height: 50vh;
+}
+.principsec2 div{
+    margin: 2px;
+    border: solid 2px black;
+}
+/*parte 222*/
+/* section2
+creamos un padre que contenga todos los divs*/
+#principal{
+    height: 90vh;
+    width: 80vw;
+    justify-content:center;
+    border: solid 2px black;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+#principal h2{
+    margin: 5%;
+}
+/* definimos los boxes */
+.serv{
+    height: 200px;
+    width: 300px;
+    margin: 5%;
+    border: solid 2px black;
+    padding: 2px;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+}
+.serv h3{
+    margin:  20%;
+}s
+.servicios{
+    width: 100%;
+    border: solid 2px black;
+    text-align:center;
+    margin: 20px;
+}
+/*parte 33333*/
 
 
 
 
+
+
+
+
+
+
+
+/*parte 33333*/
+
+.contenedor{   
+    width: 100%;
+    display: flex;
+    max-width: 1500px;
+
+}
+
+.card{
+    width: 110%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0px 1px rgba(0,0,0,0.2);
+    cursor: default;
+    transition:  all 600ms ease;
+}
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+}
+.card img{
+    height: 40vw;
+    border-radius: 60%;
+}
+.card .contenido{
+    font-size: 15%;
+    padding: 10%;
+    text-align: center;
+}
+.titulo{
+    width:100%;
+    height: 20px;
+    text-align: center;
+    border: solid 2px gree;
+    font-weight: 350;
+    margin-bottom: 10px;
+  
+}
+
+
+/*footer*/
+
+#footer{
+    height: 10vh;
+}
+
+#footer img{
+    height: 5vh;
+    width: 4vw;
+}
 

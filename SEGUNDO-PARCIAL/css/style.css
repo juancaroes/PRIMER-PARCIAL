@@ -1,0 +1,148 @@
+* {
+    margin: 0; /*Se reinicia el margin de todos los elementos a 0 */
+    padding: 0; /*Se reinicia el padding de todos los elementos a 0 */
+    box-sizing: border-box; /*El width del elemento se calcula tomando en cuenta el padding y el border*/
+    font-family: Arial, Helvetica, sans-serif; /*Se define el font family para todos los elementos como Arial (Puede ser otro diferente) */
+    scroll-behavior: smooth;
+    border: 0;
+    box-sizing: border-box;
+}
+.header {
+    --background-principal: black;
+    --background-secundaria: red;
+    --color-letra: white;
+    top: 0;
+    display: flex;
+    width: 100vw;
+    justify-content: space-between; /* Los elementos del contenedor se envian hacia los lados */
+    align-items: center;
+    background-color: var(--background-principal);
+    
+    padding: 0 0.5rem 0 2rem; /*TOP: 0px RIGHT: 8px BOTTOM: 0px LEFT: 32px*/
+}
+.boton-whatsapp img{
+    width: 100%;
+    height: 100%;
+
+}
+.boton-whatsapp{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+.logo-cocacola{
+    width: 40%;
+    height: 40%;
+}
+.header h1 {
+    color: var(--color-letra)
+}
+section{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    width: 100vw;
+    height: 100vw;
+    border: 2px solid red;
+}
+.botonessection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; /* Se le da un margen igual a cada elemento del contenedor */
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--background-principal);
+    
+}
+.botonessection a {
+    color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 20%;
+    height: 50%;
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: red;
+    border-radius: 100%;
+    padding: 1rem;
+}
+
+.seccion1{
+    border: solid 2px black;
+    width: 35%;
+    color: var(--color-letra);
+}
+/* configuracion del titulo de div1-secion1 */
+.seccion1 h2 {
+    margin:10%;
+    border: solid 2px black;
+    font-size: 4rem;
+    font-weight: 600; /*Que tanta negrilla se quiere*/
+}
+/* parrafo */
+.seccion1 p{
+    margin: 5%;
+    
+}
+.contenedorima img{
+    border-radius: 60vw;
+    width: 30vw;
+    height: 50vh;
+}
+.principsec2 div{
+    margin: 2px;
+    border: solid 2px black;
+}
+
+/*parte 222.*/
+
+#seccion2{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.contenedor-servicios{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    border: 2px solid red;
+    border-radius: 1rem;
+    flex-wrap: wrap;
+}
+.contenedor-servicios .servicio{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid black;
+    row-gap: 3rem;
+    padding: 3rem;
+    border-radius: 1rem;
+}
+
+
+
+
+/*footer*/
+
+#footer{
+    height: 10vh;
+}
+
+#footer img{
+    height: 5vh;
+    width: 4vw;
+}

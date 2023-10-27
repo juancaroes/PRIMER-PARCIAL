@@ -6,21 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/stylesec3.css">
-    <script src="js/scripts.js"></script>
+    <script src="js/script.js"></script>
     <script src="js/section2.js" defer></script>
     <script src="js/section3.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
-    <script></script>
     <title>primerparcial</title>
     <title>icono1</title>
+
+    <style>
+      #section2, #section3 {
+          display: none;
+      }
+      #servicios, #colaboradores {
+            display: none;
+        }
+        
+    </style>
+
+    
+
   </head>
   <body>
-    <div class="options">
-      <button id="btnShow" class="btn btn-primary" onclick="ShoHide()">
-        Mostrar/ocultar
-      </button>
-    </div>
+   
 
     <a class="boton-whatsapp" href="https://wa.me/1234 ">
         <img src="imagenes/whatsapp-logo-free-png.webp" alt="">
@@ -35,26 +41,20 @@
         />
         <i class="icon-coca"></i>
       </div>
+      <h1>--</h1>
       <h1>juancaro</h1>
-      <div class="botonessection">
+      <h1>--</h1>
+      <div class="botonessection" id="botonessection">
         <a href="#section1">home</a>
-        <a href="#section2">servicios</a>
-        <a href="#section3">colaboradores</a>
+        <a href="#verMasPanel" id="verMas">Ver más</a>
+        <a href="#section2" id="servicios" style="display: none;">servicios</a>
+        <a href="#section3" id="colaboradores" style="display: none;">colaboradores</a>
         <a href="#footer">final</a>
       </div>
       
     </header>
-    <div class="opciones">
-    <button id="btnShow" class="btn btn-primary" onclick="ShowHide()">
-        Mostrar-Ocultar
-    </button>
-    <button id="btnContinuar" class="btn btn-success" style="display:none;" onclick="Continuar()">
-        Continuar
-    </button>
-    <button id="btnCancelar" class="btn btn-danger" style="display:none;" onclick="Cancelar()">
-        Cancelar
-    </button>
-    </div>
+  
+
     <section id="section1">
       <div class="Descripcion">
         <h2>COCA-COLITA</h2>
@@ -71,42 +71,50 @@
         <img clas="imagen1" src="imagenes/tomando.png" alt="" />
       </div>
     </section>
-    <div class="opciones">
-      <button id="btnShow" class="btn btn-primary" onclick="ShowHide()">
-          Mostrar-Ocultar
-      </button>
-      <button id="btnContinuar" class="btn btn-success" style="display:none;" onclick="Continuar()">
-          Continuar
-      </button>
-      <button id="btnCancelar" class="btn btn-danger" style="display:none;" onclick="Cancelar()">
-          Cancelar
-      </button>
       </div>
-    <section class="sesion2" id="seccion2">
-      
-    
-      
-      <section id="section3" style="display: none;" id="section3">
-        <main>
-          <h1 class="title">COLABORADORES</h1>
-          <div class="container-box">
-            <div class="box">
-              <img src="" alt="">
-            </div>
-          </div>
-        </main>
-      </section>
-      
-      <section id="section1">
-        <!-- Contenido de la primera sección -->
-        <button id="btnMostrarSecciones">Mostrar Secciones</button>
+
+      <section class="section2" id="section2">
+        <h2>Servicios</h2>
+        <div class="contenedor-servicios">
+        </div>
       </section>
 
+    <section  class="visible-section3" id="section3">
+      <h2>Colaboradores</h2>
+      <div Class="contenedor-Colaboradores">
+      </div>
+    </section>
+
+    <div id="verMasPanel" style="display: none;">
+      <h2>¿ver el contenido de colaboradores y servisios??</h2>
+      <button id="cancelar">Cancelar</button>
+      <button id="aceptar">continuar</button>
+    </div>
     <section id="footer">
         <p>copyright @</p>
         <a href="#section1">
             <img src="imagenes/arriba.png" alt="img-footer" class="img-footer">
         </a>
     </section>
+    <script>
+      document.getElementById('verMas').addEventListener('click', function () {
+          document.getElementById('verMasPanel').style.display = 'block';
+      });
+
+      document.getElementById('cancelar').addEventListener('click', function () {
+          document.getElementById('verMasPanel').style.display = 'none';
+      });
+
+      document.getElementById('aceptar').addEventListener('click', function () {
+          document.getElementById('verMasPanel').style.display = 'none';
+          document.getElementById('section2').style.display = 'block';
+          document.getElementById('section3').style.display = 'block';
+          document.getElementById('verMas').style.display = 'none';
+          document.getElementById('servicios').style.display = 'inline';
+          document.getElementById('colaboradores').style.display = 'inline';
+      });
+  </script>
+</body>
+</html>
   </body>
 </html>

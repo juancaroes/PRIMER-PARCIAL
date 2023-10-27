@@ -146,3 +146,11 @@ section{
     height: 5vh;
     width: 4vw;
 }
+/* esto es para el boton de mostrar o cancelar*/
+#section2, #section3 {
+    display: none;
+}
+
+#verMasPanel {
+    display: none;
+   }
